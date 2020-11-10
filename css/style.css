@@ -9,7 +9,6 @@ body{
   box-shadow: 0 5px 20px rgba( 0, 0, 0, .8);
   width: 1000px;
   min-height: 100vh;
-
 }
 
 form{
@@ -18,10 +17,10 @@ form{
 }
 
 .content{
-    display:flex;
+    display: flex;
     flex-direction: column;
     background-color: #fff;
-   
+    height: 100vh;
 }
 
 .hat{
@@ -182,7 +181,7 @@ ul {
   font-size: 16;
   color: rgb(136, 136, 136);
   width: 1000px;
-  height: 60px;
+  max-height: 60px;
   background:rgb(223, 223, 223);
   border-top: solid 1px  rgb(165, 165, 165);
 }
