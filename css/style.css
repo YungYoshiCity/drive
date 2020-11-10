@@ -9,6 +9,7 @@ body{
   box-shadow: 0 5px 20px rgba( 0, 0, 0, .8);
   width: 1000px;
   min-height: 100vh;
+  display: flex;
 }
 
 form{
@@ -20,7 +21,6 @@ form{
     display: flex;
     flex-direction: column;
     background-color: #fff;
-    height: 100vh;
 }
 
 .hat{
