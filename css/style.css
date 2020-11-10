@@ -1,0 +1,297 @@
+body{
+    padding: 0 calc(20px - (100vw - 100%)) 0 0; 
+    margin: 0;
+    background: rgb(221, 221, 221);
+}
+
+.all{
+  margin: 0 auto;
+  box-shadow: 0 5px 20px rgba( 0, 0, 0, .8);
+  max-width: 1000px;
+
+  min-height: 100vh;
+  display: flex;
+}
+
+form{
+  display: flex;
+  width: 100%;
+}
+
+.content{
+    display:flex;
+    flex-direction: column;
+    background-color: #fff;
+   
+}
+
+.hat{
+    display: flex;
+    width: 100%;
+    height: 200px;
+    background: #336699;
+}
+
+.logo{
+  width: 200px;
+  background: url("../pictures/logo.png") no-repeat right;
+}
+
+.hat:hover{
+  cursor: pointer;
+}
+
+.up-hat{
+    opacity: 0.7;
+    background: url("../pictures/car.png") no-repeat right;
+    width: 800px;
+    height: 200px;  
+    float:right;  
+}
+
+  
+ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  
+  li {
+    background-color: #336699;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    display: block;
+    position: relative;
+    text-decoration: none;
+  }
+
+
+  .center{
+    justify-content: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .center p{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+  }
+
+  form{
+    height: 45px;
+    margin-top: 3px;
+  }
+    
+  input{
+    padding: 10px 0;
+    display: block;
+    background: #336699;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    color: white;
+    border: none;
+    width: 100%;
+    height: 100%;
+    white-space: pre-line;
+  }
+  
+  li input:hover, li:hover{
+    outline: none;
+    background: #55a5dd;
+    cursor: pointer;
+  }
+
+  li input:active, li input:focus{
+    outline: none;
+    color: white;
+    border: none;
+  }
+  
+  ul li ul {
+    z-index: 1;
+    background: #336699;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    display: none;
+  }
+  
+  ul li:hover > ul,
+  ul li ul:hover {
+    visibility: visible;
+    opacity: 1;
+    display: table;
+  }
+  
+  ul li ul li {
+    width: 100%;
+  }
+
+  ul li ul li input{
+    width: 100%;
+    padding: 8px 0;
+  }
+
+.wrapper{
+  height: 100%;
+  display: flex;
+}
+
+.left-menu{
+    width: 20%;
+    background-color:rgb(223, 223, 223);
+}
+
+.body{
+  color: rgb(51, 51, 51);
+  padding: 10px;
+  text-align: justify;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24;
+  width: 80%;
+  background-color: rgb(255, 255, 255);
+}
+
+.body h1{
+  text-align: center;
+  font-size: 32px;
+}
+
+.footer{
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: .4em;
+  font-size: 16;
+  color: rgb(136, 136, 136);
+  width: 1000px;
+  height: 60px;
+  background:rgb(223, 223, 223);
+  border-top: solid 1px  rgb(165, 165, 165);
+}
+
+.footer p{
+  margin-left: 10px;
+}
+
+.map{
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.border{
+  border: solid 1px black;
+}
+
+.section-block{
+  display: none;
+  visibility: hidden;
+}
+
+.section-active{
+  display: block;
+  visibility: visible;
+}
+
+.slider{
+  border: 1px solid black;
+  display: flex;
+  max-width: 90%;
+  height: 800px;
+  position: relative;
+  margin: auto;
+  margin-bottom: 15px;
+}
+/* Картинка мастабируется по отношению к родительскому элементу */
+.slider .item img {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
+
+.pic{
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.item{
+  width: 100%;
+  height: 100%;
+}
+
+/* Кнопки вперед и назад */
+.slider .prev, .slider .next {
+  background: rgba(255, 255, 255, 0.5);
+
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color:black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.5s ease;
+  border-radius: 0px 10px 10px 0px;
+}
+.slider .next {
+  right: 0;
+  border-radius: 10px 0px 0px 10px;
+}
+/* При наведении на кнопки добавляем фон кнопок */
+.slider .prev:hover,
+.slider .next:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+/* Кружочки */
+.slider-dots {
+  text-align: center;
+}
+
+.slider-dots_item{
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 2px;
+  background-color: #ddd;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+
+.active,
+.slider-dots_item:hover {
+  background-color: #aaa;
+}
+/* Анимация слайдов */
+.slider .item {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: .5s;
+  animation-name: fade;
+  animation-duration: .5s;
+}
+
+@keyframes fade {
+  from {
+      opacity: .4
+  }
+  to {
+      opacity: 1
+  }
+}
